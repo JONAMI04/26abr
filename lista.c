@@ -3,6 +3,8 @@
 //
 
 #include <string.h>
+#include <malloc.h>
+#include <stdio.h>
 #include "lista.h"
 
 void inicial(Alumno *unalumnocualquiera) {
@@ -12,5 +14,25 @@ void inicial(Alumno *unalumnocualquiera) {
     unalumnocualquiera->nota[2]=4;
 
     strcpy(unalumnocualquiera->nombre, "hola");
+
+}
+
+Alumno *newalu(int matricula, char *nombre) {
+    Alumno *alumno = malloc(sizeof (alumno));
+    if (alumno == NULL){
+        printf("sin memoria");
+        exit -1;
+    }
+    strcpy(alumno->nombre, nombre);
+    alumno->idMatricula=matricula;
+    alumno->sig=NULL;
+
+    return alumno;
+}
+
+void encolar(Alumno **pcabecera) {
+    if (*pCabecera==NULL){
+
+    }
 
 }
