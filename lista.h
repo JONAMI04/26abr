@@ -15,7 +15,7 @@ typedef struct alumno{
 
 Alumno *newalu(int matricula, char *nombre);
 
-void encolar(Alumno *alumno);
+void encolar(Alumno **pCabecera, Alumno *alumno);
 
 void inicial(Alumno *alumno);
 

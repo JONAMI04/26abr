@@ -2,11 +2,14 @@
 #include <string.h>
 #include "lista.h"
 
-int main(void) {
-    Alumno *alumno1 = newalu(123,"alu1");
+int main() {
     Alumno *alumno2 = newalu(124,"alu2");
-    Alumno *alumno3 = newalu(125,"alu3");
+    Alumno  *cabecera = NULL;
+    encolar(&cabecera,alumno2);
 
+    /*Alumno *alumno1 = newalu(123,"alu1");
+    Alumno *alumno3 = newalu(125,"alu3");
+    */
 
     /*juan;
     inicial(&juan);

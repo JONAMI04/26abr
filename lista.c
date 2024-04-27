@@ -30,9 +30,14 @@ Alumno *newalu(int matricula, char *nombre) {
     return alumno;
 }
 
-void encolar(Alumno **pcabecera) {
+void encolar(Alumno **pCabecera, Alumno *alumno) {
     if (*pCabecera==NULL){
-
+        *pCabecera=alumno;
+    }else{
+        Alumno *aux=*pCabecera;
+        while (aux->sig != NULL){
+            aux = aux->sig;
+        }
+        aux =aux->sig;
     }
-
 }
